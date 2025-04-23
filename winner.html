@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+    :root {
+      --primary-bgColor: #89c15e;
+      --dark-green: #004429;
+      --white: #fff;
+      --gray: #656565;
+      --black: #333333;
+      --orangeYellow: rgb(255, 191, 52);
+      --purple: rgb(174, 93, 246);
+      --blue: rgb(10, 74, 142);
+      --yellow: #ffd600;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+    }
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      background-color: var(--primary-bgColor);
+    }
+    main {
+      height: 100%;
+      width: 100%;
+    }
+    a{
+        text-decoration: none;
+        color: var(--black);
+    }
+    .winner-container {
+      width: 80%;
+      position: relative;
+      top: 10%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & img {
+        width: 35vw;
+      }
+      & .content-wrapper {
+        text-align: center;
+        color: var(--white);
+        letter-spacing: 2px;
+
+        & h1 {
+          font-size: 7vw;
+          text-transform: uppercase;
+        }
+        & p {
+          font-size: 3em;
+          text-transform: uppercase;
+        }
+        & .btn-secondary {
+          background-color: var(--white);
+          color: var(--black);
+          border-radius: 10px;
+          text-transform: uppercase;
+          font-weight: bold;
+          padding: 1em 2em;
+          letter-spacing: 2px;
+        }
+        & .inline {
+          display: inline-block;
+          margin-top: 1rem;
+        }
+      }
+    }
+  </style>
+  <body>
+    <main>
+      <div class="winner-container">
+        <div class="content-wrapper">
+          <img src="./winnerPage.png" alt="" />
+          <h1>Hurray!!</h1>
+          <p>You Won the game</p>
+          <div class="btn-secondary inline">
+            <a href="./index.html"> Play Again</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

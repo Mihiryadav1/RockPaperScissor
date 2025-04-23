@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <main>
+      <!-- Score Board Start -->
+      <div class="score-board">
+        <div class="title">
+          <div>ROCK</div>
+          <div>PAPER</div>
+          <div>SCISSOR</div>
+        </div>
+        <div class="score-cards">
+          <div class="computer-score">
+            <div class="score-title">
+              Computer <br />
+              Score
+            </div>
+            <div class="score" id="computer-score">0</div>
+          </div>
+          <div class="user-score">
+            <div class="score-title">
+              User <br />
+              Score
+            </div>
+            <div class="score" id="user-score">0</div>
+          </div>
+        </div>
+      </div>
+      <!-- Score Board End -->
+      <!-- Game Container Start -->
+      <div class="game-container">
+        <div class="game-wrapper" onclick="decideWinner(event)">
+          <button class="circle rock" id="circle1" value="rock" name="rock">
+            <img src="./rock.png" alt="" name="rock" />
+          </button>
+          <button class="circle scissor" id="circle2" name="scissor">
+            <img src="./scissor.png" alt="scissor" name="scissor" />
+          </button>
+          <button class="circle paper" id="circle3" name="paper">
+            <img src="./paper.svg" alt="paper" name="paper" />
+          </button>
+
+          <div class="line" id="line1"></div>
+          <div class="line" id="line2"></div>
+          <div class="line" id="line3"></div>
+        </div>
+        <!-- Game wrapper end -->
+        <!-- Grid Wrapper Start -->
+       <div class="result-wrapper">
+        <div class="result-page">
+          <div class="flex">
+             <!-- container start -->
+           <div class="container-wrapper">
+            <div class="container" id="user">
+            
+              <div class="item">
+                <img src="" id="selectedImg" alt="selectedImg" />
+              </div>
+              <div class="animated-circles selectedcircles"></div>
+              <div class="animated-circles selectedcircles" style="animation-delay: 1s"></div>
+              <div class="animated-circles selectedcircles" style="animation-delay: 2s"></div>
+              <div class="animated-circles selectedcircles" style="animation-delay: 3s"></div>
+            </div>
+           </div>
+             <!-- container end -->
+              <!-- content start -->
+               <div class="container-wrapper">
+
+                 <div class="content"> <div id="message-1"></div>
+                 <div id="message-2">Against PC</div>
+                 <button class="playAgain btn-secondary" onclick="reloadScreen()">
+                   Play Again
+                 </button></div>
+               </div>
+            <!-- content end -->
+            <!-- container start -->
+            <div class="container-wrapper">
+            <div class="container" id="pc">
+              <div class="item">
+                <img src="" id="computedImg" alt="computedImg" />
+              </div>
+              <div class="animated-circles computedCircles" ></div>
+              <div class="animated-circles computedCircles" style="animation-delay: 1s"></div>
+              <div class="animated-circles computedCircles" style="animation-delay: 2s"></div>
+              <div class="animated-circles computedCircles" style="animation-delay: 3s"></div>
+            </div>
+          </div>
+            <!-- container end -->
+          </div>
+        </div>
+       </div>
+        </div>
+
+        <!-- Grid Wrapper end -->
+      </div>
+      <!-- Game Container End -->
+    </main>
+
+    <!-- Game Rules Start  -->
+    <div class="wrapper">
+      <div class="rules-container">
+        <div class="close-btn">
+          <img src="./icon.png" alt="">
+        </div>
+        <h2>Game Rules</h2>
+        <div>
+          <ul>
+            <li>
+              Rock beats scissors, scissors beat paper, and paper beats rock
+            </li>
+            <li>
+              Agree ahead of time whether you’ll count off “rock, paper,
+              scissors, shoot” or just “rock, paper, scissors.”
+            </li>
+            <li>
+              Use rock, paper, scissors to settle minor decisions or simply play
+              to pass the time
+            </li>
+            <li>
+              If both players lay down the same hand, each player lays down
+              another hand
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="open-rules">
+        <button class="btn-primary open-btn">Rules</button>
+        <button class="btn-primary next-btn">
+          <a href="./winner.html">Next</a>
+        </button>
+      </div>
+    </div>
+    <!-- Game Rules End -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
